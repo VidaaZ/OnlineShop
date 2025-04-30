@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pIOBfnN4mrI=",
+  "dgSpecHash": "37BmEBs/eFU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\vidaz\\source\\repos\\FinalOnlineShop\\Business\\Business.csproj",
+  "projectFilePath": "C:\\Users\\vidaz\\source\\repos\\WebApiShopping\\Business\\Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vidaz\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\vidaz\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.4\\microsoft.extensions.dependencyinjection.abstractions.9.0.4.nupkg.sha512",
