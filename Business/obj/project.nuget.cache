@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "pIOBfnN4mrI=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\vidaz\\source\\repos\\FinalOnlineShop\\Business\\Business.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vidaz\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\vidaz\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.4\\microsoft.extensions.dependencyinjection.abstractions.9.0.4.nupkg.sha512",
+    "C:\\Users\\vidaz\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\vidaz\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
