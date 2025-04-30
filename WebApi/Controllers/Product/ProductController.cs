@@ -5,9 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebApi.Controllers.Product
 {
-    [ApiController]
-    [Route("api/product")]
-    public class ProductController : ControllerBase
+    public class ProductController : ProductBaseController
     {
         #region properties
 

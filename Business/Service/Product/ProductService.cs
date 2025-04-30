@@ -1,11 +1,11 @@
 ﻿using Domain.Dto.Product;
 using Domain.Mapper.Product;
-using Domain.Repository;
+using Domain.Repository.Product;
 using Domain.Service.Product;
 
 namespace Business.Service.Product
 {
-    public class ProductService : IProductService
+    internal class ProductService : IProductService
     {
         #region Properties
 

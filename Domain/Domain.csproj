@@ -10,4 +10,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Dto\Company\" />
+    <Folder Include="Mapper\Company\" />
+    <Folder Include="Service\Company\" />
+  </ItemGroup>
+
 </Project>

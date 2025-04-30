@@ -1,6 +1,6 @@
 ﻿using DataAccess.Data;
 using Domain.Entity.Product;
-using Domain.Repository;
+using Domain.Repository.Product;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess.Repository.Product
@@ -71,7 +71,7 @@ namespace DataAccess.Repository.Product
                 }
             }
 
-            return await query.ToListAsync(); 
+            return await query.ToListAsync();
         }
 
 
@@ -79,11 +79,8 @@ namespace DataAccess.Repository.Product
         {
             var existingProduct = await _dbContext.Products.FirstOrDefaultAsync(p => p.Id == product.Id);
 
-            if (existingProduct == null)
-            {
+            if (existingProduct is null)
                 throw new Exception("Product not found.");
-            }
-
 
             _dbContext.Entry(existingProduct).CurrentValues.SetValues(product);
 
