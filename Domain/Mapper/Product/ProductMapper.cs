@@ -2,12 +2,12 @@
 using Domain.Entity.Product;
 using Domain.ViewModel.Product;
 
+
 namespace Domain.Mapper.Product
 {
     public static class ProductMapper
     {
         #region ToDto
-
         public static ProductRequestDto ToDto(this ProductRequestViewModel viewModel)
         {
             return new ProductRequestDto
@@ -21,7 +21,6 @@ namespace Domain.Mapper.Product
                 UpdatedDate = viewModel.UpdatedDate
             };
         }
-
         public static UpdateProductRequestDto ToDto(this UpdateProductRequestViewModel viewModel)
         {
             return new UpdateProductRequestDto
@@ -36,7 +35,6 @@ namespace Domain.Mapper.Product
                 CategoryId = viewModel.CategoryId
             };
         }
-
         public static UpdateProductRequestDto ToDto(this Domain.Entity.Product.Product entity)
         {
             return new UpdateProductRequestDto
@@ -51,7 +49,6 @@ namespace Domain.Mapper.Product
                 CategoryId = entity.CategoryId
             };
         }
-
         public static ProductResponseDto ToProductResponseDto(this Entity.Product.Product entity)
         {
             return new ProductResponseDto
@@ -65,7 +62,6 @@ namespace Domain.Mapper.Product
                 CategoryId = entity.CategoryId
             };
         }
-
         public static IEnumerable<ProductResponseDto> ToDto(this IEnumerable<Entity.Product.Product> entities)
         {
             return entities.Select(item => item.ToProductResponseDto());
@@ -85,7 +81,10 @@ namespace Domain.Mapper.Product
                 StockQuantity = dto.StockQuantity ?? 0,
                 CreatedDate = DateTime.TryParse(dto.CreatedDate, out DateTime createdDate) ? createdDate : DateTime.MinValue,
                 UpdatedDate = DateTime.TryParse(dto.UpdatedDate, out DateTime updateDate) ? updateDate : DateTime.MinValue,
-                CategoryId = dto.CategoryId
+                CategoryId = dto.CategoryId,
+
+                 BrandId = 1,        
+                IsActive = true
             };
         }
 
@@ -100,6 +99,18 @@ namespace Domain.Mapper.Product
         }
 
         #endregion
+        //**
+        public static void UpdateEntity(this UpdateProductRequestDto dto, Entity.Product.Product entity)
+        {
+            entity.Name = dto.Name;
+            entity.Description = dto.Description;
+            entity.Price = Convert.ToInt64(dto.Price);
+            entity.StockQuantity = dto.StockQuantity ?? 0;
+            entity.CreatedDate = DateTime.TryParse(dto.CreatedDate, out DateTime createdDate) ? createdDate : DateTime.MinValue;
+            entity.UpdatedDate = DateTime.TryParse(dto.UpdatedDate, out DateTime updatedDate) ? updatedDate : DateTime.MinValue;
+            entity.CategoryId = dto.CategoryId;
+        }
+
 
     }
 }

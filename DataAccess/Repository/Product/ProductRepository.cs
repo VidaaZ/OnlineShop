@@ -8,7 +8,10 @@ namespace DataAccess.Repository.Product
     public class ProductRepository : IProductRepository
     {
         private readonly ApplicationDbContext _dbContext;
-
+        public ProductRepository(ApplicationDbContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
         public Task<string> CreateAllProductImagesByIdAsync(ProductImage productImages)
         {
             throw new NotImplementedException();
@@ -17,7 +20,7 @@ namespace DataAccess.Repository.Product
         public async Task<Domain.Entity.Product.Product> CreateProductAsync(Domain.Entity.Product.Product product)
         {
             await _dbContext.Products.AddAsync(product);
-            _dbContext.SaveChanges();
+            await  _dbContext.SaveChangesAsync();
             return product;
         }
 
