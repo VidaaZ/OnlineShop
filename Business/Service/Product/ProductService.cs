@@ -138,12 +138,15 @@ namespace Business.Service.Product
         {
             try
             {
+
                 var existingProduct = await _productRepository.GetProductById(dto.Id);
 
                 if (existingProduct == null)
                     throw new KeyNotFoundException("Product with the specified ID not found.");
 
-                ProductMapper.ToDto(existingProduct);
+                // ProductMapper.ToEntity(existingProduct);
+                dto.UpdateEntity(existingProduct);
+
 
                 var updatedProduct = await _productRepository.UpdateProductRepository(existingProduct);
                 return ProductMapper.ToProductResponseDto(updatedProduct);

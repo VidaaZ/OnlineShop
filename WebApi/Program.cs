@@ -1,19 +1,27 @@
 using Microsoft.EntityFrameworkCore;
 using DataAccess.Data;
 using DataAccess;
+using Infrastructure;
+
+
+
 
 
 
 var builder = WebApplication.CreateBuilder(args);
+//builder.Services.RegisterDataAccessServices(builder.Configuration);
+builder.Services.RegisterServiceServices(builder.Configuration);
+
+
+
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
 
 var app = builder.Build();
-builder.Services.RegisterDataAccessServices(builder.Configuration);
+
 
 
 if (app.Environment.IsDevelopment())

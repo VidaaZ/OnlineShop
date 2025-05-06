@@ -363,3 +363,7 @@ C:\Users\vidaz\source\repos\WebApiShopping\WebApi\obj\Debug\net8.0\refint\WebApi
 C:\Users\vidaz\source\repos\WebApiShopping\WebApi\obj\Debug\net8.0\WebApi.pdb
 C:\Users\vidaz\source\repos\WebApiShopping\WebApi\obj\Debug\net8.0\WebApi.genruntimeconfig.cache
 C:\Users\vidaz\source\repos\WebApiShopping\WebApi\obj\Debug\net8.0\ref\WebApi.dll
+C:\Users\vidaz\source\repos\WebApiShopping\WebApi\bin\Debug\net8.0\Business.dll
+C:\Users\vidaz\source\repos\WebApiShopping\WebApi\bin\Debug\net8.0\Infrastructure.dll
+C:\Users\vidaz\source\repos\WebApiShopping\WebApi\bin\Debug\net8.0\Infrastructure.pdb
+C:\Users\vidaz\source\repos\WebApiShopping\WebApi\bin\Debug\net8.0\Business.pdb
