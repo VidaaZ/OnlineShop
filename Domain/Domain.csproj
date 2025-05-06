@@ -7,13 +7,29 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Service\Signup\**" />
+    <EmbeddedResource Remove="Service\Signup\**" />
+    <None Remove="Service\Signup\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="bin\Debug\net8.0\Domain.deps.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Dto\Company\" />
     <Folder Include="Mapper\Company\" />
+    <Folder Include="Repository\Signup\" />
     <Folder Include="Service\Company\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="bin\Debug\net8.0\Domain.dll" />
+    <None Include="bin\Debug\net8.0\Domain.pdb" />
   </ItemGroup>
 
 </Project>

@@ -1,7 +1,5 @@
 ﻿using Business.Service.Product;
-using Business.Service.SignupService;
 using Domain.Service.Product;
-using Domain.Service.Signup;
 using Microsoft.Extensions.DependencyInjection;
 
 
@@ -13,7 +11,7 @@ namespace Business
         {
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IProductCategoryService, ProductCategoryService>();
-            services.AddScoped<ISignUpService, SignUpService>();
+            //services.AddScoped<ISignUpService, SignUpService>();
         }
     }
 }

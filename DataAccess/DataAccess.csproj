@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <Folder Include="Repository\Company\" />
+    <Folder Include="Repository\Signup\" />
   </ItemGroup>
 
 </Project>

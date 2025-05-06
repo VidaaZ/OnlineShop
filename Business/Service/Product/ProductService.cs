@@ -5,7 +5,7 @@ using Domain.Service.Product;
 
 namespace Business.Service.Product
 {
-    internal class ProductService : IProductService
+    public class ProductService : IProductService
     {
         #region Properties
 
@@ -141,12 +141,8 @@ namespace Business.Service.Product
 
                 var existingProduct = await _productRepository.GetProductById(dto.Id);
 
-                if (existingProduct == null)
+                if (existingProduct is null)
                     throw new KeyNotFoundException("Product with the specified ID not found.");
-
-                // ProductMapper.ToEntity(existingProduct);
-                dto.UpdateEntity(existingProduct);
-
 
                 var updatedProduct = await _productRepository.UpdateProductRepository(existingProduct);
                 return ProductMapper.ToProductResponseDto(updatedProduct);

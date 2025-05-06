@@ -97,20 +97,7 @@ namespace Domain.Mapper.Product
                 ContentType = dto.ContentType
             };
         }
-
+       
         #endregion
-        //**
-        public static void UpdateEntity(this UpdateProductRequestDto dto, Entity.Product.Product entity)
-        {
-            entity.Name = dto.Name;
-            entity.Description = dto.Description;
-            entity.Price = Convert.ToInt64(dto.Price);
-            entity.StockQuantity = dto.StockQuantity ?? 0;
-            entity.CreatedDate = DateTime.TryParse(dto.CreatedDate, out DateTime createdDate) ? createdDate : DateTime.MinValue;
-            entity.UpdatedDate = DateTime.TryParse(dto.UpdatedDate, out DateTime updatedDate) ? updatedDate : DateTime.MinValue;
-            entity.CategoryId = dto.CategoryId;
-        }
-
-
     }
 }

@@ -5,6 +5,13 @@ namespace Business.Service.SignupService
 {
     internal class SignUpService : ISignUpService
     {
+        private readonly ISignupRepository _signUpRepository;
+
+        public SignUpService(ISignupRepository signUpRepository)
+        {
+            _signUpRepository = signUpRepository;
+        }
+
         public async Task<bool> SignUpAsync(SignUpRequestDto userInfo)
         {
             var existingUser = await _signUpRepository.UserExistsAsync(userInfo.UserName, userInfo.Email);
